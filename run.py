@@ -1,30 +1,27 @@
-import tkinter as tk
+from PySide2 import QtWidgets, QtGui, QtCore 
 import myfitnesspal
+import sys
 import json
 
 
 
-class Page(tk.Frame):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
-        supeer().__init__(master)
-        self.master = master
+        QtWidgets.QMainWindow.__init__(self)
+        self.setWindowTitle("Fitnessa")
     
     def create_widgets(self):
-            
-"""
-Places for labels and buttons:
-    grid size: 20 by 30
-    ----page home----
-    prev_button: 0-3 x 0-6
-    next_button: 0-3 x 24-30
-"""
+        pass
 
-def get_account()
+def get_account():
     with open("account_info.json", "r") as info_file:
         json.load(info_file)
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = Application(master=root)
-    app.mainloop()
+    app = QtWidgets.QApplication([])
+    window = MainWindow()
+    window.resize(800,600)
+    window.show()
+
+    sys.exit(app.exec_())
