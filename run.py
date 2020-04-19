@@ -20,7 +20,7 @@ if __name__ == "__main__":
     username, password = get_account()
     app = QtWidgets.QApplication([])
     fitnessa = Fitnessa(username, password)
-    fitnessa.main_window.resize(800, 600)
-    fitnessa.main_window.show()
+
+    fitnessa.start()
 
     sys.exit(app.exec_())
