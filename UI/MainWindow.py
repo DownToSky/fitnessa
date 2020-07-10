@@ -3,24 +3,24 @@
 ################################################################################
 ## Form generated from reading UI file 'MainWindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
+from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QMetaObject,
+    QObject, QPoint, QRect, QSize, QTime, QUrl, Qt)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+    QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
+    QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(336, 261)
+        MainWindow.resize(336, 258)
         MainWindow.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
 "\n"
 "	All credits for stylesheet to ColinDuquesnoy at\n"
@@ -2281,25 +2281,29 @@ class Ui_MainWindow(object):
         self.page = QWidget()
         self.page.setObjectName(u"page")
         self.gridLayout_7 = QGridLayout(self.page)
+        self.gridLayout_7.setSpacing(0)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.tabWidget = QTabWidget(self.page)
-        self.tabWidget.setObjectName(u"tabWidget")
+        self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.tabs = QTabWidget(self.page)
+        self.tabs.setObjectName(u"tabs")
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
-        self.tabWidget.setSizePolicy(sizePolicy1)
-        self.tabWidget.setCursor(QCursor(Qt.ArrowCursor))
-        self.tabWidget.setLayoutDirection(Qt.LeftToRight)
-        self.tabWidget.setStyleSheet(u"")
-        self.tabWidget.setTabShape(QTabWidget.Rounded)
-        self.tabWidget.setIconSize(QSize(16, 16))
-        self.tabWidget.setDocumentMode(False)
-        self.tabWidget.setTabsClosable(False)
+        sizePolicy1.setHeightForWidth(self.tabs.sizePolicy().hasHeightForWidth())
+        self.tabs.setSizePolicy(sizePolicy1)
+        self.tabs.setCursor(QCursor(Qt.ArrowCursor))
+        self.tabs.setLayoutDirection(Qt.LeftToRight)
+        self.tabs.setStyleSheet(u"")
+        self.tabs.setTabShape(QTabWidget.Rounded)
+        self.tabs.setIconSize(QSize(16, 16))
+        self.tabs.setDocumentMode(False)
+        self.tabs.setTabsClosable(False)
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
         self.gridLayout_3 = QGridLayout(self.tab)
+        self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.progressBar = QProgressBar(self.tab)
         self.progressBar.setObjectName(u"progressBar")
         self.progressBar.setValue(24)
@@ -2310,16 +2314,16 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addItem(self.horizontalSpacer_3, 2, 0, 1, 6)
 
-        self.label_5 = QLabel(self.tab)
-        self.label_5.setObjectName(u"label_5")
+        self.weightL = QLabel(self.tab)
+        self.weightL.setObjectName(u"weightL")
         font = QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.weightL.setFont(font)
+        self.weightL.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.gridLayout_3.addWidget(self.label_5, 5, 4, 1, 1)
+        self.gridLayout_3.addWidget(self.weightL, 5, 4, 1, 1)
 
         self.label_7 = QLabel(self.tab)
         self.label_7.setObjectName(u"label_7")
@@ -2328,19 +2332,19 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.label_7, 5, 0, 1, 1)
 
-        self.label_8 = QLabel(self.tab)
-        self.label_8.setObjectName(u"label_8")
+        self.sleepTimeL = QLabel(self.tab)
+        self.sleepTimeL.setObjectName(u"sleepTimeL")
         font1 = QFont()
         font1.setPointSize(8)
-        self.label_8.setFont(font1)
+        self.sleepTimeL.setFont(font1)
 
-        self.gridLayout_3.addWidget(self.label_8, 5, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.sleepTimeL, 5, 1, 1, 1)
 
-        self.label_6 = QLabel(self.tab)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font1)
+        self.weightUnitL = QLabel(self.tab)
+        self.weightUnitL.setObjectName(u"weightUnitL")
+        self.weightUnitL.setFont(font1)
 
-        self.gridLayout_3.addWidget(self.label_6, 5, 5, 1, 1)
+        self.gridLayout_3.addWidget(self.weightUnitL, 5, 5, 1, 1)
 
         self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -2366,56 +2370,82 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.label_11, 0, 0, 1, 3)
 
-        self.tabWidget.addTab(self.tab, "")
+        self.tabs.addTab(self.tab, "")
         self.tab_2 = QWidget()
         self.tab_2.setObjectName(u"tab_2")
         self.gridLayout = QGridLayout(self.tab_2)
+        self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.listWidget_3 = QListWidget(self.tab_2)
-        self.listWidget_3.setObjectName(u"listWidget_3")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.toolBox = QToolBox(self.tab_2)
+        self.toolBox.setObjectName(u"toolBox")
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.page_3.setGeometry(QRect(0, 0, 157, 86))
+        self.gridLayout_10 = QGridLayout(self.page_3)
+        self.gridLayout_10.setSpacing(0)
+        self.gridLayout_10.setObjectName(u"gridLayout_10")
+        self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.listView = QListView(self.page_3)
+        self.listView.setObjectName(u"listView")
 
-        self.gridLayout.addWidget(self.listWidget_3, 1, 2, 1, 1)
+        self.gridLayout_10.addWidget(self.listView, 0, 0, 1, 1)
 
-        self.listWidget_2 = QListWidget(self.tab_2)
-        self.listWidget_2.setObjectName(u"listWidget_2")
+        self.toolBox.addItem(self.page_3, u"Page 1")
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.page_4.setGeometry(QRect(0, 0, 157, 86))
+        self.gridLayout_11 = QGridLayout(self.page_4)
+        self.gridLayout_11.setSpacing(0)
+        self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.gridLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.listView_2 = QListView(self.page_4)
+        self.listView_2.setObjectName(u"listView_2")
 
-        self.gridLayout.addWidget(self.listWidget_2, 1, 1, 1, 1)
+        self.gridLayout_11.addWidget(self.listView_2, 0, 0, 1, 1)
 
-        self.label_2 = QLabel(self.tab_2)
-        self.label_2.setObjectName(u"label_2")
+        self.toolBox.addItem(self.page_4, u"Page 2")
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.page_5.setGeometry(QRect(0, 0, 157, 86))
+        self.gridLayout_12 = QGridLayout(self.page_5)
+        self.gridLayout_12.setSpacing(0)
+        self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.gridLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.listView_3 = QListView(self.page_5)
+        self.listView_3.setObjectName(u"listView_3")
 
-        self.gridLayout.addWidget(self.label_2, 2, 2, 1, 1)
+        self.gridLayout_12.addWidget(self.listView_3, 0, 0, 1, 1)
 
-        self.listWidget_4 = QListWidget(self.tab_2)
-        self.listWidget_4.setObjectName(u"listWidget_4")
+        self.toolBox.addItem(self.page_5, u"Page")
+        self.page_6 = QWidget()
+        self.page_6.setObjectName(u"page_6")
+        self.page_6.setGeometry(QRect(0, 0, 157, 86))
+        self.gridLayout_13 = QGridLayout(self.page_6)
+        self.gridLayout_13.setSpacing(0)
+        self.gridLayout_13.setObjectName(u"gridLayout_13")
+        self.gridLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.listView_4 = QListView(self.page_6)
+        self.listView_4.setObjectName(u"listView_4")
 
-        self.gridLayout.addWidget(self.listWidget_4, 3, 2, 1, 1)
+        self.gridLayout_13.addWidget(self.listView_4, 0, 0, 1, 1)
 
-        self.label = QLabel(self.tab_2)
-        self.label.setObjectName(u"label")
+        self.toolBox.addItem(self.page_6, u"Page")
 
-        self.gridLayout.addWidget(self.label, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.toolBox, 0, 0, 2, 1)
 
-        self.label_3 = QLabel(self.tab_2)
-        self.label_3.setObjectName(u"label_3")
+        self.tableWidget = QTableWidget(self.tab_2)
+        self.tableWidget.setObjectName(u"tableWidget")
 
-        self.gridLayout.addWidget(self.label_3, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.tableWidget, 1, 1, 1, 1)
 
-        self.label_4 = QLabel(self.tab_2)
-        self.label_4.setObjectName(u"label_4")
-
-        self.gridLayout.addWidget(self.label_4, 0, 2, 1, 1)
-
-        self.listWidget = QListWidget(self.tab_2)
-        self.listWidget.setObjectName(u"listWidget")
-
-        self.gridLayout.addWidget(self.listWidget, 3, 1, 1, 1)
-
-        self.tabWidget.addTab(self.tab_2, "")
+        self.tabs.addTab(self.tab_2, "")
         self.tab_3 = QWidget()
         self.tab_3.setObjectName(u"tab_3")
         self.gridLayout_9 = QGridLayout(self.tab_3)
+        self.gridLayout_9.setSpacing(0)
         self.gridLayout_9.setObjectName(u"gridLayout_9")
+        self.gridLayout_9.setContentsMargins(0, 0, 0, 0)
         self.listWidget_6 = QListWidget(self.tab_3)
         self.listWidget_6.setObjectName(u"listWidget_6")
 
@@ -2436,24 +2466,30 @@ class Ui_MainWindow(object):
 
         self.gridLayout_9.addWidget(self.label_9, 0, 1, 1, 1)
 
-        self.tabWidget.addTab(self.tab_3, "")
+        self.tabs.addTab(self.tab_3, "")
         self.tab_4 = QWidget()
         self.tab_4.setObjectName(u"tab_4")
         self.gridLayout_4 = QGridLayout(self.tab_4)
+        self.gridLayout_4.setSpacing(0)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.tabWidget.addTab(self.tab_4, "")
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.tabs.addTab(self.tab_4, "")
         self.tab_5 = QWidget()
         self.tab_5.setObjectName(u"tab_5")
         self.gridLayout_5 = QGridLayout(self.tab_5)
+        self.gridLayout_5.setSpacing(0)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.tabWidget.addTab(self.tab_5, "")
+        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.tabs.addTab(self.tab_5, "")
         self.tab_6 = QWidget()
         self.tab_6.setObjectName(u"tab_6")
         self.gridLayout_6 = QGridLayout(self.tab_6)
+        self.gridLayout_6.setSpacing(0)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.tabWidget.addTab(self.tab_6, "")
+        self.gridLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.tabs.addTab(self.tab_6, "")
 
-        self.gridLayout_7.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.tabs, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QWidget()
@@ -2499,7 +2535,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabs.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(0)
         self.pushButton_3.setDefault(False)
 
 
@@ -2510,24 +2547,24 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Fitnessa", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Date", None))
         self.progressBar.setFormat(QCoreApplication.translate("MainWindow", u"%p% ", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Weight:", None))
+        self.weightL.setText(QCoreApplication.translate("MainWindow", u"Weight:", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Slept for:", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"hours", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"lbs", None))
+        self.sleepTimeL.setText(QCoreApplication.translate("MainWindow", u"hours", None))
+        self.weightUnitL.setText(QCoreApplication.translate("MainWindow", u"lbs", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"cals", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Calories:", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Overview", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Snacks", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Dinner", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Breakfast", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Lunch", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Meals", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Overview", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), QCoreApplication.translate("MainWindow", u"Page 1", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_4), QCoreApplication.translate("MainWindow", u"Page 2", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_5), QCoreApplication.translate("MainWindow", u"Page", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_6), QCoreApplication.translate("MainWindow", u"Page", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Meals", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Strength ", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Cardiovascular", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Workout", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("MainWindow", u"Weight", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), QCoreApplication.translate("MainWindow", u"Sleep", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), QCoreApplication.translate("MainWindow", u"Calories", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Workout", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab_4), QCoreApplication.translate("MainWindow", u"Weight", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab_5), QCoreApplication.translate("MainWindow", u"Sleep", None))
+        self.tabs.setTabText(self.tabs.indexOf(self.tab_6), QCoreApplication.translate("MainWindow", u"Calories", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Select Date", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Today", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Sync", None))

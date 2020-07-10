@@ -17,10 +17,9 @@ def get_account():
 
 
 if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
     username, password = get_account()
-    app = QtWidgets.QApplication([])
     fitnessa = Fitnessa(username, password)
 
     fitnessa.start()
-
     sys.exit(app.exec_())

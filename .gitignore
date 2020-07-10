@@ -1,6 +1,10 @@
 # Account info json
 account.json
 
+# Vscode stuffs
+.vscode
+workspace.code-workspace
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
